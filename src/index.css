@@ -20,15 +20,28 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* photo */
+
 @media (min-width: 350px) and (max-width: 768px) {  
   .photo-1 {
-    width: 300px;
+    width: 260px;
   }
   .photo-2 {
-    width: 210px;
+    width: 200px;
   }
 }
+
+@media (min-width: 250px) and (max-width: 340px) {  
+  .photo-1 {
+    width: 100px;
+  }
+  .photo-2 {
+    width: 70px;
+  }
+}
+
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .photo-1 {
@@ -38,6 +51,7 @@ body {
     width: 170px;
   }
 }
+/* arrow */
 @media (min-width: 1024px) and (max-width: 1077px) {
   .arrow-t {
     bottom: 36px;

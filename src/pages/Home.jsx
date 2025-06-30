@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div className="grid grid-cols-1 gap-2 md:gap-8 w-full py-5">
-      <div className="bg-tertiary rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-6 p-7 min-h-[calc(100vh-150px)]">
+      <div className="bg-tertiary rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-6 p-7 h-[calc(100vh-120px)]">
         <div className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-4 md:gap-8 p-4 pt-0">
           {/*  */}
           <div className="">
@@ -61,7 +61,7 @@ const Home = () => {
         {/*  */}
         <div className="relative z-50">
           <img
-            className="photo-1 object-cover absolute -bottom-7 right-8 z-0"
+            className="photo-1 object-cover absolute -bottom-7 right-4 z-0"
             src="/images/Rectangle 2.png"
             alt=""
           />
