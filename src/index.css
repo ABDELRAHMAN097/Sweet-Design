@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-primary: #fc0000;
+  --color-tertiary: #C1DCDC;
+}
+
+
+@theme {
+  --color-primary: #1a1a1a;
+  --color-secondary: #1a1a1a;
+  --color-tertiary: #C1DCDC;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* ... */
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
