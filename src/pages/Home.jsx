@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </div>
           {/* search */}
-          <div className="flex items-center justify-center bg-white rounded px-2 py-2 min-w-[250px]">
+          <div className="flex items-center justify-center bg-white rounded px-2 py-2 min-w-[180px] sm:min-w-[250px] md:min-w-[350px] ">
             <input
               className="w-full border-none outline-none bg-transparent"
               type="text"
@@ -61,22 +61,22 @@ const Home = () => {
         {/*  */}
         <div className="relative z-50">
           <img
-            className="w-[250px] md:w-[470px] object-cover absolute -bottom-7 right-8 z-0"
+            className="photo-1 object-cover absolute -bottom-7 right-8 z-0"
             src="/images/Rectangle 2.png"
             alt=""
           />
           <img
-            className="w-[170px] md:w-[340px] object-cover absolute -bottom-7 right-12 z-1"
+            className="photo-2 object-cover absolute -bottom-7 right-12 z-1"
             src="/images/uu.png"
             alt=""
           />
           <img
-            className="hidden lg:block w-[100px] md:w-[170px] object-cover absolute -bottom-4 md:bottom-20 left-0 md:-left-40 z-10"
+            className="hidden lg:block w-[100px] md:w-[170px] object-cover absolute arrow-t z-10"
             src="/images/Vector 186.png"
             alt=""
           />
           <img
-            className="hidden lg:block w-[50px] md:w-[70px] object-cover absolute top-2 md:top-0 right-2 md:right-4 z-10"
+            className="hidden lg:block w-[50px] md:w-[70px] object-cover absolute arrow-b z-10"
             src="/images/Vector 187.png"
             alt=""
           />

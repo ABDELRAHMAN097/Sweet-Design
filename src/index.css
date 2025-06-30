@@ -3,25 +3,58 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --color-primary: #fc0000;
-  --color-tertiary: #C1DCDC;
+  --color-tertiary: #c1dcdc;
 }
-
 
 @theme {
   --color-primary: #1a1a1a;
   --color-secondary: #1a1a1a;
-  --color-tertiary: #C1DCDC;
+  --color-tertiary: #c1dcdc;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* ... */
 }
-
-
 
 body {
   margin: 0;
   padding: 0;
 }
+/* photo */
+@media (min-width: 350px) and (max-width: 768px) {  
+  .photo-1 {
+    width: 300px;
+  }
+  .photo-2 {
+    width: 210px;
+  }
+}
 
-
-
+@media (min-width: 769px) and (max-width: 1024px) {
+  .photo-1 {
+    width: 240px;
+  }
+  .photo-2 {
+    width: 170px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1077px) {
+  .arrow-t {
+    bottom: 36px;
+    left: -182px;
+  }
+  .arrow-b {
+    top: -20px;
+    right: 4px;
+  }
+}
+@media (min-width: 1078px) and (max-width: 1443px) {
+  .arrow-t {
+    bottom: 36px;
+    left: -182px;
+  }
+  .arrow-b {
+    top: -20px;
+    right: 4px;
+  }
+}
