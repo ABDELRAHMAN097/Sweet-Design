@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
         <NavBar />
-      <div className="px-4 md:px-20">
+      <div className="px-4 md:px-20 overflow-hidden">
         <AppRoutes />
       </div>
       <Footer />
