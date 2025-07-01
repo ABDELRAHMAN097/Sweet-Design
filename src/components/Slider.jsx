@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { zoomIn, fadeInLeft, fadeInRight, fadeInDown, fadeInUp } from "../utils/Animations";
+import { motion } from "framer-motion";
 const Slider = () => {
   const slides = [
     {
@@ -31,13 +33,30 @@ const Slider = () => {
   const [current, setCurrent] = useState(0);
 
   return (
+    <motion.div
+    variants={zoomIn}
+    initial="hidden"
+    whileInView="show"
+    className="w-full flex flex-col gap-4 items-end relative"
+  >
     <div className="w-full flex flex-col gap-4 items-end relative">
       {/* Header with pagination and text */}
       <div className="w-full flex justify-between items-center">
+        <motion.p
+        variants={fadeInLeft}
+        initial="hidden"
+        whileInView="show"
+        >
         <p className="text-black text-sm md:text-2xl font-bold">
         What customers say about <br className="hidden md:block"/>GREEMIND?
         </p>
+        </motion.p>
 
+        <motion.div
+        variants={fadeInRight}
+        initial="hidden"
+        whileInView="show"
+        >
         <div className="flex gap-2">
           {slides.map((_, i) => (
             <button
@@ -49,6 +68,7 @@ const Slider = () => {
             ></button>
           ))}
         </div>
+        </motion.div>
       </div>
 
       {/* Slider container */}
@@ -72,10 +92,29 @@ const Slider = () => {
                 <p className="text-gray-600 font-[420]">{slide.content}</p>
                 </div>
                 <div className="flex items-center justify-start w-full">
-                    <img className="w-20 self-end" src={slide.img} alt="" />
+                    <motion.img
+                    variants={fadeInLeft}
+                    initial="hidden"
+                    whileInView="show"
+                    className="w-20 self-end" src={slide.img} alt="" />
+                    
                     <div className="flex items-start justify-between pr-5 w-full">
-                        <p className="text-gray-800 font-[700]">{slide.name}</p>
+                        <motion.p
+                        variants={fadeInUp}
+                        initial="hidden"
+                        whileInView="show"
+                        className="text-gray-800 font-[700]"
+                        >
+                        {slide.name}
+                        </motion.p>
+                        {/*  */}
+                        <motion.p
+                        variants={fadeInDown}
+                        initial="hidden"
+                        whileInView="show"
+                        >
                         <p className="text-gray-800 font-[700] flex items-center justify-center gap-1"><FaStar />{slide.rate}</p>
+                        </motion.p>
                     </div>
                 </div>
               </div>
@@ -84,6 +123,7 @@ const Slider = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
 
