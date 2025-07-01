@@ -1,6 +1,8 @@
 import React from 'react'
 import { AboutCard } from '../components/AboutCard'
 import { HeaderSection } from './HeaderSection'
+import { motion } from 'framer-motion'
+import { zoomIn, fadeInLeft, fadeInRight, fadeInDown, fadeInUp } from '../utils/Animations'
 export const AboutUs = () => {
 
     const products = [
@@ -23,15 +25,41 @@ export const AboutUs = () => {
 
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6'>
+    <motion.div 
+    variants={zoomIn}
+    initial="hidden"
+    whileInView="show"
+    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6'>
        <HeaderSection header="AboutUs" subHeader="Order now and appreciate the beauty of nature" />
         {/* card */}
        
-        {products.map((product, index) => (
-            <AboutCard key={index} img={product.img} title={product.title} price={product.price} />
-          ))}
+        {products.map((product, index) => {
+        const animationVariant =
+          index === 0
+            ? fadeInLeft
+            : index === 1
+            ? fadeInUp
+            : index === 2
+            ? fadeInRight
+            : fadeInDown;
+
+        return (
+          <motion.div
+            key={index}
+            variants={animationVariant}
+            initial="hidden"
+            whileInView="show"
+          >
+            <AboutCard
+              img={product.img}
+              title={product.title}
+              price={product.price}
+            />
+          </motion.div>
+        );
+      })}
           
       
-    </div>
+    </motion.div>
   )
 }

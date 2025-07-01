@@ -4,8 +4,15 @@ import { BsArrowRight } from "react-icons/bs";
 import { AboutUs } from "../components/AboutUs";
 import { HomeCard } from "../components/HomeCard";
 import { Categories } from "../components/Categories";
-import  Slider  from "../components/Slider";
-
+import Slider from "../components/Slider";
+import { motion } from "framer-motion";
+import {
+  zoomIn,
+  fadeInLeft,
+  fadeInRight,
+  fadeInDown,
+  fadeInUp,
+} from "../utils/Animations";
 const Home = () => {
   const products = [
     {
@@ -27,16 +34,28 @@ const Home = () => {
 
   return (
     <div className="grid grid-cols-1 gap-8 w-full py-5">
-      <div className="bg-tertiary rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-6 p-7 h-[calc(100vh-120px)]">
+      <motion.div 
+      variants={zoomIn}
+      initial="hidden"
+      whileInView="show"
+      className="bg-tertiary rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-6 p-7 h-[calc(100vh-120px)]">
         <div className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-4 md:gap-8 p-4 pt-0">
           {/*  */}
           <div className="">
-            <h1 className="text-black text-xl md:text-4xl font-bold">
+            <motion.h1 
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="show"
+            className="text-black text-xl md:text-4xl font-bold">
               HBuy your <br className="hidden md:block" /> dream plantsome
-            </h1>
+            </motion.h1>
           </div>
           {/*  */}
-          <div className="flex justify-start items-start divide-x divide-gray-700">
+          <motion.div 
+          variants={fadeInDown}
+          initial="hidden"
+          whileInView="show"
+          className="flex justify-start items-start divide-x divide-gray-700">
             <div className="flex flex-col justify-center items-center p-2 pl-0">
               <p className="text-xl md:text-4xl font-bold">50+</p>
               <span>Plant Species</span>
@@ -46,7 +65,7 @@ const Home = () => {
               <p className="text-xl md:text-4xl font-bold">100+</p>
               <span>Rare Plants</span>
             </div>
-          </div>
+          </motion.div>
           {/* search */}
           <div className="flex items-center justify-center bg-white rounded px-2 py-2 min-w-[180px] sm:min-w-[250px] md:min-w-[350px] ">
             <input
@@ -82,9 +101,13 @@ const Home = () => {
             alt=""
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <motion.div 
+      variants={zoomIn}
+      initial="hidden"
+      whileInView="show"
+      className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="flex flex-col justify-center items-center md:justify-start md:items-start gap-4 md:gap-8 p-4">
           <h2 className="text-xl md:text-2xl font-bold">
             Best Selling <br className="hidden md:block" />
@@ -98,15 +121,32 @@ const Home = () => {
             <BsArrowRight />
           </button>
         </div>
-        {products.map((product, index) => (
-          <HomeCard
-            key={index}
-            img={product.img}
-            title={product.title}
-            price={product.price}
-          />
-        ))}
-      </div>
+        {products.map((product, index) => {
+          const animationVariant =
+            index === 0
+              ? fadeInLeft
+              : index === 1
+              ? fadeInUp
+              : index === 2
+              ? fadeInRight
+              : fadeInDown;
+
+          return (
+            <motion.div
+              key={index}
+              variants={animationVariant}
+              initial="hidden"
+              whileInView="show"
+            >
+              <HomeCard
+                img={product.img}
+                title={product.title}
+                price={product.price}
+              />
+            </motion.div>
+          );
+        })}
+      </motion.div>
       {/* about */}
       <AboutUs />
       <Categories />
