@@ -63,16 +63,16 @@ const Slider = () => {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="w-full flex-shrink-0 bg-tertiary flex flex-col items-center justify-center"
+              className="w-full flex-shrink-0 flex flex-col items-center justify-center"
               style={{ width: `${100 / slides.length}%` }}
             >
              
-              <div className="w-full flex flex-col items-start justify-start">
+              <div className="w-full flex flex-col items-start justify-start bg-tertiary rounded-xl">
                 <div className="p-5 text-start">
                 <p className="text-gray-600 font-[420]">{slide.content}</p>
                 </div>
                 <div className="flex items-center justify-start w-full">
-                    <img className="w-20" src={slide.img} alt="" />
+                    <img className="w-20 self-end" src={slide.img} alt="" />
                     <div className="flex items-start justify-between pr-5 w-full">
                         <p className="text-gray-800 font-[700]">{slide.name}</p>
                         <p className="text-gray-800 font-[700] flex items-center justify-center gap-1"><FaStar />{slide.rate}</p>
