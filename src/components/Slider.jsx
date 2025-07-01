@@ -1,0 +1,90 @@
+import React, { useState } from "react";
+import { FaStar } from "react-icons/fa";
+const Slider = () => {
+  const slides = [
+    {
+      id: 1,
+      content:
+        "Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      img: "/images/p01.png",
+      name: "John Deo",
+      rate: "4.5",
+    },
+    {
+      id: 2,
+      content:
+        "Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      img: "/images/p02.png",
+      name: "John Deo",
+      rate: "4.5",
+    },
+    {
+      id: 3,
+      content:
+        "Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      img: "/images/p01.png",
+      name: "John Deo",
+      rate: "4.5",
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  return (
+    <div className="w-full flex flex-col gap-4 items-end relative">
+      {/* Header with pagination and text */}
+      <div className="w-full flex justify-between items-center">
+        <p className="text-black text-sm md:text-2xl font-bold">
+        What customers say about <br className="hidden md:block"/>GREEMIND?
+        </p>
+
+        <div className="flex gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`transition-all duration-300 h-2 rounded-full ${
+                current === i ? "bg-tertiary w-6" : "bg-gray-400 w-2"
+              }`}
+            ></button>
+          ))}
+        </div>
+      </div>
+
+      {/* Slider container */}
+      <div className="w-full md:w-1/2 overflow-hidden rounded-xl relative">
+        <div
+          className="flex transition-transform duration-500"
+          style={{
+            transform: `translateX(-${current * (100 / slides.length)}%)`,
+            width: `${slides.length * 100}%`,
+          }}
+        >
+          {slides.map((slide) => (
+            <div
+              key={slide.id}
+              className="w-full flex-shrink-0 bg-tertiary flex flex-col items-center justify-center"
+              style={{ width: `${100 / slides.length}%` }}
+            >
+             
+              <div className="w-full flex flex-col items-start justify-start">
+                <div className="p-5 text-start">
+                <p className="text-gray-600 font-[420]">{slide.content}</p>
+                </div>
+                <div className="flex items-center justify-start w-full">
+                    <img className="w-20" src={slide.img} alt="" />
+                    <div className="flex items-start justify-between pr-5 w-full">
+                        <p className="text-gray-800 font-[700]">{slide.name}</p>
+                        <p className="text-gray-800 font-[700] flex items-center justify-center gap-1"><FaStar />{slide.rate}</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Slider;

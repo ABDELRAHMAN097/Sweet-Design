@@ -4,6 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { AboutUs } from "../components/AboutUs";
 import { HomeCard } from "../components/HomeCard";
 import { Categories } from "../components/Categories";
+import  Slider  from "../components/Slider";
 
 const Home = () => {
   const products = [
@@ -25,7 +26,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-2 md:gap-8 w-full py-5">
+    <div className="grid grid-cols-1 gap-8 w-full py-5">
       <div className="bg-tertiary rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-6 p-7 h-[calc(100vh-120px)]">
         <div className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-4 md:gap-8 p-4 pt-0">
           {/*  */}
@@ -109,6 +110,7 @@ const Home = () => {
       {/* about */}
       <AboutUs />
       <Categories />
+      <Slider />
     </div>
   );
 };
