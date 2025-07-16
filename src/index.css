@@ -2,12 +2,12 @@
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --color-primary: #fc0000;
+  --color-primary: #7bbcc5;
   --color-tertiary: #c1dcdc;
 }
 
 @theme {
-  --color-primary: #1a1a1a;
+  --color-primary: #7bbcc5;
   --color-secondary: #1a1a1a;
   --color-tertiary: #c1dcdc;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
