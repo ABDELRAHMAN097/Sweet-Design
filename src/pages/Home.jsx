@@ -2,7 +2,7 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import { AboutUs } from "../components/AboutUs";
-import { HomeCard } from "../components/HomeCard";
+import HomeCard from "../components/HomeCard";
 import { Categories } from "../components/Categories";
 import Slider from "../components/Slider";
 import { motion } from "framer-motion";
@@ -13,6 +13,7 @@ import {
   fadeInDown,
   fadeInUp,
 } from "../utils/Animations";
+import Products from "../components/products";
 const Home = () => {
   const products = [
     {
@@ -102,7 +103,7 @@ const Home = () => {
           />
         </div>
       </motion.div>
-
+      {/* frist section */}
       <motion.div 
       variants={zoomIn}
       initial="hidden"
@@ -147,6 +148,13 @@ const Home = () => {
           );
         })}
       </motion.div>
+
+      {/* second section */}
+
+      <div className="w-full">
+        <Products />
+      </div>
+
       {/* about */}
       <AboutUs />
       <Categories />
