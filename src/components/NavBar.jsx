@@ -16,6 +16,9 @@ const NavBar = () => {
         <Link to="/not-found">
           <li className={location.pathname === "/not-found" ? "text-primary border-b-2" : ""}>Not Found</li>
         </Link>
+        <Link to="/add-product">
+          <li className={location.pathname === "/add-product" ? "text-primary border-b-2" : ""}>Add Product</li>
+        </Link>
       </ul>
     </nav>
   </div>

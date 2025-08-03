@@ -14,6 +14,13 @@ const Products = () => {
 .then(res => res.json())
 .then(data => setProducts(data.products));
 },[])
+
+
+
+useEffect(() => {
+  console.log("Products:", products);
+}, [products]);
+
   return (
     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  w-full'>
       {products.map(product => (
