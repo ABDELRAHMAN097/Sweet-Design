@@ -88,7 +88,7 @@ const Home = () => {
           />
           <img
             className="photo-2 object-cover absolute -bottom-7 right-12 z-1"
-            src="/images/uu.png"
+            src="/images/ff.png"
             alt=""
           />
           <img
