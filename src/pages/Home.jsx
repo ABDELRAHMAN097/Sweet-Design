@@ -47,8 +47,8 @@ const Home = () => {
             variants={fadeInLeft}
             initial="hidden"
             whileInView="show"
-            className="text-black text-xl md:text-4xl font-bold">
-              HBuy your <br className="hidden md:block" /> dream plantsome
+            className="text-white text-sm md:text-xl font-bold">
+             بيتك علينا... اختار خدمتك وسيب الباقي علينا<br className="hidden md:block" /> أكتر من 50 خدمة منزلية و100 عامل معتمد
             </motion.h1>
           </div>
           {/*  */}
@@ -59,12 +59,12 @@ const Home = () => {
           className="flex justify-start items-start divide-x divide-gray-700">
             <div className="flex flex-col justify-center items-center p-2 pl-0">
               <p className="text-xl md:text-4xl font-bold">50+</p>
-              <span>Plant Species</span>
+              <span>خدمة منزلية</span>
             </div>
 
             <div className="flex flex-col justify-center items-center p-2">
               <p className="text-xl md:text-4xl font-bold">100+</p>
-              <span>Rare Plants</span>
+              <span>فني محترف</span>
             </div>
           </motion.div>
           {/* search */}
@@ -72,8 +72,8 @@ const Home = () => {
             <input
               className="w-full border-none outline-none bg-transparent"
               type="text"
-              placeholder="What are you looking for?"
-            />
+              placeholder="ابحث عن الخدمة اللي محتاجها..."
+              />
             <button className="bg-tertiary text-black rounded p-2">
               <FaSearch />
             </button>
