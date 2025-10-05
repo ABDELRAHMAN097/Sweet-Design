@@ -13,7 +13,7 @@ import {
   fadeInDown,
   fadeInUp,
 } from "../utils/Animations";
-import Products from "../components/products";
+import ServicesSection from "../components/ServicesSection";
 const Home = () => {
   const products = [
     {
@@ -104,6 +104,11 @@ const Home = () => {
         </div>
       </motion.div>
       {/* frist section */}
+      <div className="w-full">
+        <ServicesSection />
+      </div>
+      
+       {/* second section */}
       <motion.div 
       variants={zoomIn}
       initial="hidden"
@@ -148,12 +153,6 @@ const Home = () => {
           );
         })}
       </motion.div>
-
-      {/* second section */}
-
-      <div className="w-full">
-        <Products />
-      </div>
 
       {/* about */}
       <AboutUs />

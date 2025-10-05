@@ -4,11 +4,13 @@ import Contact from './src/pages/Contact'
 import Home from './src/pages/Home'
 import NotFound from './src/components/NotFound'
 import AddProduct from './src/components/AddProduct'
+import ServicesSection from './src/components/ServicesSection'
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/ServicesSection" element={<ServicesSection />} />
       <Route path="/add-product" element={<AddProduct />} />
       <Route path="*" element={<NotFound />} />
 

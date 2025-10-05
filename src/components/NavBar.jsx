@@ -35,13 +35,13 @@ const NavBar = () => {
               Contact
             </li>
           </Link>
-          <Link to="/not-found">
+          <Link to="/ServicesSection">
             <li
               className={`text-sm md:text-base hover:text-primary transition ${
-                location.pathname === "/not-found" ? "text-primary border-b-2 border-primary" : ""
+                location.pathname === "/ServicesSection" ? "text-primary border-b-2 border-primary" : ""
               }`}
             >
-              Not Found
+              Services
             </li>
           </Link>
           <Link to="/add-product">
