@@ -35,7 +35,7 @@ const NavBar = () => {
             >
               About
             </li>
-          </Link>
+          </Link> */}
 
           
           <Link to="/ServicesSection">
@@ -48,7 +48,7 @@ const NavBar = () => {
             </li>
           </Link>
 
-          <Link to="/contact">
+          {/* <Link to="/contact">
             <li
               className={`text-sm md:text-base hover:text-primary transition ${
                 location.pathname === "/contact" ? "text-primary border-b-2 border-primary" : ""
