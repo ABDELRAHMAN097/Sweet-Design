@@ -26,15 +26,18 @@ const NavBar = () => {
               Home
             </li>
           </Link>
-          <Link to="/contact">
+
+          {/* <Link to="/add-product">
             <li
               className={`text-sm md:text-base hover:text-primary transition ${
-                location.pathname === "/contact" ? "text-primary border-b-2 border-primary" : ""
+                location.pathname === "/add-product" ? "text-primary border-b-2 border-primary" : ""
               }`}
             >
-              Contact
+              About
             </li>
           </Link>
+
+          
           <Link to="/ServicesSection">
             <li
               className={`text-sm md:text-base hover:text-primary transition ${
@@ -44,15 +47,17 @@ const NavBar = () => {
               Services
             </li>
           </Link>
-          <Link to="/add-product">
+
+          <Link to="/contact">
             <li
               className={`text-sm md:text-base hover:text-primary transition ${
-                location.pathname === "/add-product" ? "text-primary border-b-2 border-primary" : ""
+                location.pathname === "/contact" ? "text-primary border-b-2 border-primary" : ""
               }`}
             >
-              Add Product
+              Contact
             </li>
-          </Link>
+          </Link> */}
+        
         </ul>
 
         {/* Mobile Icon */}

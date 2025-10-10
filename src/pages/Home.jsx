@@ -17,19 +17,19 @@ import ServicesSection from "../components/ServicesSection";
 const Home = () => {
   const products = [
     {
-      img: "/images/Frame 9.png",
-      title: "Plant Pot 1",
-      price: "120",
+      img: "/images/سباك.jfif",
+      title: "صيانة وسباكة",
+      price: "ابتداءً من 200 جنيه",
     },
     {
-      img: "/images/Frame 7.png",
-      title: "Plant Pot 2",
-      price: "180",
+      img: "/images/كهربائي (1).jfif",
+      title: "أعمال الكهرباء",
+      price: "ابتداءً من 180 جنيه",
     },
     {
-      img: "/images/Frame 8.png",
-      title: "Plant Pot 3",
-      price: "90",
+      img: "/images/شغاله.jfif",
+      title: "تنظيف المنازل",
+      price: "ابتداءً من 150 جنيه",
     },
   ];
 
@@ -116,14 +116,13 @@ const Home = () => {
       className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="flex flex-col justify-center items-center md:justify-start md:items-start gap-4 md:gap-8 p-4">
           <h2 className="text-xl md:text-2xl font-bold">
-            Best Selling <br className="hidden md:block" />
-            Plants
+          اكثر الخدمات طلبًا <br className="hidden md:block" />
+            
           </h2>
           <p className="text-gray-500 text-center md:text-left">
-            Easiest way to healthy life by buying your favorite plants{" "}
-          </p>
+          أسهل طريقة تطلب بيها خدمتك من البيت — اختار الخدمة المناسبة وسيب الباقي علينا!          </p>
           <button className="bg-tertiary text-black rounded p-2  flex justify-center items-center gap-2">
-            See more
+          شوف كل الخدمات
             <BsArrowRight />
           </button>
         </div>
@@ -155,9 +154,9 @@ const Home = () => {
       </motion.div>
 
       {/* about */}
-      <AboutUs />
+      {/* <AboutUs />
       <Categories />
-      <Slider />
+      <Slider /> */}
     </div>
   );
 };
