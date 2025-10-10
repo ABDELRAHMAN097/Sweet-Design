@@ -40,15 +40,15 @@ const Home = () => {
       initial="hidden"
       whileInView="show"
       className="bg-tertiary rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-6 p-7 h-[calc(100vh-120px)]">
-        <div className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-4 md:gap-8 p-4 pt-0">
+        <div className="flex flex-col justify-center items-center sm:justify-centrt sm:items-start gap-4 md:gap-8 p-4 pt-0">
           {/*  */}
           <div className="">
             <motion.h1 
             variants={fadeInLeft}
             initial="hidden"
             whileInView="show"
-            className="text-white text-sm md:text-xl font-bold">
-             بيتك علينا... اختار خدمتك وسيب الباقي علينا<br className="hidden md:block" /> أكتر من 50 خدمة منزلية و100 عامل معتمد
+            className="text-white text-center md:text-start text-2xl md:text-3xl font-bold">
+              ... اختار خدمتك وسيب الباقي علينا<br className="hidden md:block" /> أكتر من 50 خدمة منزلية و100 عامل معتمد
             </motion.h1>
           </div>
           {/*  */}
@@ -79,7 +79,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        {/*  */}
+        {/* photo for hero section */}
         <div className="relative z-50">
           <img
             className="photo-1 object-cover absolute -bottom-7 right-4 z-0"
@@ -87,20 +87,20 @@ const Home = () => {
             alt=""
           />
           <img
-            className="photo-2 object-cover absolute -bottom-7 right-12 z-1"
+            className="photo-2 object-cover absolute -bottom-9 right-12 z-1"
             src="/images/ff.png"
             alt=""
           />
-          <img
+          {/* <img
             className="hidden lg:block w-[100px] md:w-[170px] object-cover absolute arrow-t z-10"
             src="/images/Vector 186.png"
             alt=""
-          />
-          <img
+          /> */}
+          {/* <img
             className="hidden lg:block w-[50px] md:w-[70px] object-cover absolute arrow-b z-10"
             src="/images/Vector 187.png"
             alt=""
-          />
+          /> */}
         </div>
       </motion.div>
       {/* frist section */}
